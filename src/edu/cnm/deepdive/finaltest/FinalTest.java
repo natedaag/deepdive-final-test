@@ -1,8 +1,6 @@
 package edu.cnm.deepdive.finaltest;
 
 import java.util.Arrays;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
 
 public class FinalTest {
     
