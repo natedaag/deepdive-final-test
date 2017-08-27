@@ -31,6 +31,10 @@ public class FinalTest {
   }
   
   private static void writeOutput(String filename, Float[][] found) {
+    
+    Float sum = 0f;
+    Float counter = 0.0f;
+    
     try (
         FileOutputStream stream = new FileOutputStream(filename);
         OutputStreamWriter writer = new OutputStreamWriter(stream);
@@ -39,6 +43,9 @@ public class FinalTest {
         for (Float[] needle : found) {
           int i = 1;
           for (Float number : needle) {
+            counter++;
+            sum += number;
+            
             if (i++ == needle.length) {
               printer.printf("%.3f", number);
             } else {
@@ -47,10 +54,13 @@ public class FinalTest {
           }
           printer.println();
         }
+        float average = (sum / counter);
+        printer.print(average);
     } catch (IOException ex) {
       ex.printStackTrace();
       throw new RuntimeException(ex);
     }
   }
+  
   
 }
