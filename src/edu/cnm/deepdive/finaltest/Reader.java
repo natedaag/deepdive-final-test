@@ -27,13 +27,13 @@ public class Reader {
           work.add(floatValues);
         }
       }
-      input = work.toArray(new Float[0][]); 
-      
+      input = work.toArray(new Float[0][]);
+
     } catch (FileNotFoundException ex) {
       ex.printStackTrace();
     } catch (IOException ex) {
       ex.printStackTrace();
     }
   }
-
+  
 }
