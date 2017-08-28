@@ -6,6 +6,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 
+
+/**
+ * 
+ * @author natedaag
+ *  Reads file, sorts it for the lowest value in each array, arranges arrays and places them in order.
+ */
 public class Reader {
 
   Float[][] input = null;

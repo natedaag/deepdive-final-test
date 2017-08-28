@@ -9,6 +9,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * @author natedaag
+ *
+ *         Main class declares the resources file.
+ */
 public class FinalTest {
 
   private static final String OUTPUT_NAME = "resources/test-output.dat";
@@ -16,6 +21,11 @@ public class FinalTest {
 
   private static Comparator comparator = new TestTwo();
 
+  /**
+   * Reads input file, creates array of arrays of floats to store the values from the input file.
+   * 
+   * @param input file - float array of arrays.
+   */
   public static void main(String[] args) {
 
     Reader reader = new Reader("resources/test-input.dat");
@@ -31,6 +41,14 @@ public class FinalTest {
     writeOutput(OUTPUT_NAME, input);
   }
 
+  /**
+   * Writes output from the array of arrays, where it's been worked on, and creates the output file,
+   * where they ultimately will be. Also creates the final line, 'average', which averages all
+   * values in the array of arrays.
+   * 
+   * @param filename - the output file where all values will end up
+   * @param found - array of arrays
+   */
   private static void writeOutput(String filename, Float[][] found) {
 
     Float sum = 0f;
